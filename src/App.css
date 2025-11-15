@@ -1,11 +1,27 @@
 .App {
   min-height: 100vh;
   position: relative;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /* Ajuste para la navbar fija */
 main {
   padding-top: 75px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-top: 65px;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding-top: 60px;
+  }
 }
 
 /* Smooth scroll para los enlaces internos */
@@ -39,6 +55,24 @@ html {
   z-index: 1000;
   opacity: 0;
   visibility: hidden;
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    width: 45px;
+    height: 45px;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .back-to-top {
+    width: 40px;
+    height: 40px;
+    bottom: 1rem;
+    right: 1rem;
+  }
 }
 
 .back-to-top.visible {
