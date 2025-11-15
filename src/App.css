@@ -1,37 +1,68 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  position: relative;
+}
+
+/* Ajuste para la navbar fija */
+main {
+  padding-top: 75px;
+}
+
+/* Smooth scroll para los enlaces internos */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mejoras de accesibilidad */
+*:focus {
+  outline: 2px solid var(--color-naranjo);
+  outline-offset: 2px;
+}
+
+/* Botón para volver arriba */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--color-verde-reciclaje);
+  color: var(--color-blanco);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  cursor: pointer;
+  box-shadow: var(--shadow-media);
+  transition: var(--transition-suave);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+.back-to-top:hover {
+  background-color: var(--color-naranjo);
+  transform: translateY(-2px);
+}
+
+/* Loading states */
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--color-blanco);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
   to {
     transform: rotate(360deg);
   }

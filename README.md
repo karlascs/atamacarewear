@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Atacama Rewear - Sitio Web
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🌵 Descripción
+Sitio web oficial de **Atacama Rewear**, marca chilena de moda circular y triple impacto que rescata textiles del Desierto de Atacama y los transforma en prendas únicas mediante upcycling, generando empleo inclusivo.
 
 ## Available Scripts
 

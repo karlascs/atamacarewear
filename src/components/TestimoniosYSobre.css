@@ -1,0 +1,366 @@
+.testimonios-seccion {
+  padding-bottom: 4rem;
+}
+
+.testimonios-grid {
+  margin-top: 3rem;
+}
+
+.testimonio-card {
+  background-color: var(--color-blanco);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow-suave);
+  transition: var(--transition-suave);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonio-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-media);
+}
+
+.testimonio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.quote-icon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--color-naranjo);
+  opacity: 0.7;
+}
+
+.testimonio-estrellas {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.estrella {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #FFC107;
+}
+
+.testimonio-mensaje {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--color-gris);
+  margin-bottom: 1.25rem;
+  flex: 1;
+  font-style: italic;
+}
+
+.testimonio-autor {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.autor-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.autor-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--color-verde-reciclaje), var(--color-naranjo));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-blanco);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.autor-info {
+  flex: 1;
+}
+
+.autor-nombre {
+  font-weight: 600;
+  color: var(--color-negro);
+  margin-bottom: 0.25rem;
+}
+
+.autor-rol {
+  font-size: 0.9rem;
+  color: var(--color-gris);
+}
+
+/* Sobre Nosotros */
+.sobre-nosotros-seccion {
+  background: linear-gradient(135deg, var(--color-arena), var(--color-beige));
+  padding: 4rem 2rem;
+  border-radius: 20px;
+  margin-top: 2rem;
+}
+
+.sobre-contenido .sobre-texto h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-negro);
+}
+
+.sobre-intro {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--color-gris);
+  margin-bottom: 2rem;
+}
+
+.sobre-valores {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.valor-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background-color: var(--color-blanco);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-suave);
+}
+
+.valor-item svg {
+  color: var(--color-verde-reciclaje);
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.valor-item h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-negro);
+  margin-bottom: 0.5rem;
+}
+
+.valor-item p {
+  font-size: 0.95rem;
+  color: var(--color-gris);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.sobre-estadisticas h3 {
+  font-size: 1.5rem;
+  color: var(--color-negro);
+  margin-bottom: 2rem;
+}
+
+.estadisticas-sobre {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-sobre {
+  background-color: var(--color-blanco);
+  padding: 1.5rem 1rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: var(--shadow-suave);
+}
+
+.stat-sobre .stat-numero {
+  display: block;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--color-verde-reciclaje);
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.stat-sobre .stat-texto {
+  font-size: 0.9rem;
+  color: var(--color-gris);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.ubicacion-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-blanco);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-suave);
+}
+
+.ubicacion-info svg {
+  color: var(--color-naranjo);
+}
+
+.ubicacion-info span {
+  font-size: 0.95rem;
+  color: var(--color-negro);
+  font-weight: 500;
+}
+
+/* Equipo */
+.equipo-seccion {
+  margin-top: 4rem;
+}
+
+.equipo-seccion h3 {
+  font-size: 1.75rem;
+  color: var(--color-negro);
+}
+
+.equipo-intro {
+  font-size: 1.1rem;
+  color: var(--color-gris);
+  max-width: 600px;
+  margin: 1rem auto 3rem;
+}
+
+.equipo-grid {
+  margin-top: 2rem;
+}
+
+.miembro-card {
+  background-color: var(--color-blanco);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow-suave);
+  text-align: center;
+  transition: var(--transition-suave);
+}
+
+.miembro-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-media);
+}
+
+.miembro-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin: 0 auto 1.25rem;
+  overflow: hidden;
+}
+
+.miembro-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.miembro-avatar .avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--color-verde-reciclaje), var(--color-naranjo));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-blanco);
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.miembro-nombre {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-negro);
+  margin-bottom: 0.5rem;
+}
+
+.miembro-cargo {
+  font-size: 1rem;
+  color: var(--color-naranjo);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.miembro-descripcion {
+  font-size: 0.95rem;
+  color: var(--color-gris);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .testimonios-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .testimonio-card {
+    padding: 1.5rem;
+  }
+  
+  .sobre-nosotros-seccion {
+    padding: 2rem 1rem;
+  }
+  
+  .sobre-contenido .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .sobre-texto h2 {
+    font-size: 1.75rem;
+  }
+  
+  .estadisticas-sobre {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .equipo-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .miembro-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonio-mensaje {
+    font-size: 1rem;
+  }
+  
+  .sobre-intro {
+    font-size: 1rem;
+  }
+  
+  .valor-item {
+    padding: 1rem;
+  }
+  
+  .stat-sobre {
+    padding: 1rem;
+  }
+  
+  .stat-sobre .stat-numero {
+    font-size: 1.75rem;
+  }
+  
+  .equipo-intro {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,448 @@
+.taller-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation: cardReveal 0.6s ease-out;
+}
+
+.taller-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.taller-card:hover::before {
+  left: 100%;
+}
+
+.taller-card:hover {
+  transform: translateY(-15px) rotateX(5deg) rotateY(5deg);
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.15),
+    0 0 0 2px rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(15px);
+}
+
+.taller-header {
+  background: linear-gradient(
+    135deg,
+    #10B981 0%,
+    #059669 25%,
+    #F97316 75%,
+    #EA580C 100%
+  );
+  background-size: 300% 300%;
+  color: var(--color-blanco);
+  padding: 2rem 1.5rem;
+  border-radius: 20px 20px 0 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  animation: gradientShift 8s ease-in-out infinite;
+}
+
+.taller-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.taller-icono {
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+  animation: iconFloat 3s ease-in-out infinite;
+}
+
+.taller-card:hover .taller-icono {
+  transform: scale(1.1) rotateY(15deg);
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.3));
+}
+
+.taller-titulo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: -0.02em;
+  transition: all 0.3s ease;
+}
+
+.taller-card:hover .taller-titulo {
+  transform: translateY(-2px);
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.taller-descripcion {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.taller-detalles {
+  background-color: var(--color-gris-claro);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.detalle-item {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-gris);
+}
+
+.detalle-item:last-child {
+  margin-bottom: 0;
+}
+
+.detalle-item strong {
+  color: var(--color-negro);
+}
+
+.taller-beneficios {
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.taller-beneficios h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-negro);
+  margin-bottom: 0.75rem;
+}
+
+.taller-beneficios ul {
+  list-style: none;
+  padding: 0;
+}
+
+.taller-beneficios li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--color-gris);
+}
+
+.taller-beneficios li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--color-naranjo);
+  font-weight: bold;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.comunidad-stats {
+  margin: 4rem 0;
+}
+
+.comunidad-stats h3 {
+  font-size: 1.75rem;
+  color: var(--color-negro);
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background-color: var(--color-blanco);
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-suave);
+  transition: var(--transition-suave);
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-media);
+}
+
+.stat-numero {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-verde-reciclaje);
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.stat-titulo {
+  font-size: 0.9rem;
+  color: var(--color-gris);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.contacto-talleres {
+  background-color: var(--color-blanco);
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow-suave);
+}
+
+.contacto-contenido h3 {
+  font-size: 1.75rem;
+  color: var(--color-negro);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.contacto-contenido > p {
+  font-size: 1.1rem;
+  text-align: center;
+  color: var(--color-gris);
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+}
+
+.contacto-opciones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.contacto-opcion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+  padding: 1.25rem 1rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  border: 1px solid rgba(45, 90, 39, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.contacto-opcion:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-color: rgba(45, 90, 39, 0.15);
+  transform: translateY(-1px);
+}
+
+.contacto-opcion svg {
+  color: rgba(45, 90, 39, 0.6);
+  flex-shrink: 0;
+  opacity: 0.7;
+  order: 2;
+}
+
+.contacto-opcion h4 {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-negro);
+  margin-bottom: 0.25rem;
+  order: 1;
+}
+
+.contacto-opcion p {
+  font-size: 0.8rem;
+  color: var(--color-gris);
+  margin: 0;
+  line-height: 1.4;
+  letter-spacing: 0.2px;
+  order: 1;
+}
+
+.contacto-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .talleres-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .comunidad-stats .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .stat-numero {
+    font-size: 2rem;
+  }
+  
+  .contacto-talleres {
+    padding: 2rem;
+  }
+  
+  .contacto-opciones {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .contacto-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contacto-cta .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .taller-header {
+    padding: 1rem;
+  }
+  
+  .taller-titulo {
+    font-size: 1.125rem;
+  }
+  
+  .stat-card {
+    padding: 1.25rem 0.75rem;
+  }
+  
+  .stat-numero {
+    font-size: 1.875rem;
+  }
+  
+  .comunidad-stats .grid-4 {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .contacto-contenido h3 {
+    font-size: 1.5rem;
+  }
+  
+  .contacto-contenido > p {
+    font-size: 1rem;
+  }
+}
+
+/* Animaciones épicas */
+@keyframes cardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(50px) rotateX(-15deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg);
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes iconFloat {
+  0%, 100% { 
+    transform: translateY(0px) scale(1);
+  }
+  50% { 
+    transform: translateY(-5px) scale(1.05);
+  }
+}
+
+/* Efectos de brillo en hover */
+.taller-card:hover {
+  position: relative;
+}
+
+.taller-card:hover::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    45deg,
+    #10B981,
+    #F97316,
+    #10B981
+  );
+  background-size: 300% 300%;
+  border-radius: 22px;
+  z-index: -1;
+  animation: borderGlow 2s ease-in-out infinite;
+}
+
+@keyframes borderGlow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Efectos de partículas en la sección de talleres */
+#talleres {
+  position: relative;
+  overflow: hidden;
+}
+
+#talleres::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(2px 2px at 30px 40px, rgba(16, 185, 129, 0.2), transparent),
+    radial-gradient(1px 1px at 60px 80px, rgba(249, 115, 22, 0.2), transparent),
+    radial-gradient(1px 1px at 90px 20px, rgba(16, 185, 129, 0.15), transparent);
+  background-repeat: repeat;
+  background-size: 120px 120px;
+  animation: tallerParticles 30s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes tallerParticles {
+  0% { transform: translateX(0px) translateY(0px); }
+  100% { transform: translateX(-120px) translateY(-120px); }
+}
+
+/* Asegurar que el contenido esté por encima */
+#talleres .container {
+  position: relative;
+  z-index: 1;
+}

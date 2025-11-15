@@ -1,0 +1,689 @@
+/* Negocio Hero Épico */
+.negocio-hero {
+  position: relative;
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.negocio-hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.negocio-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    /* Gradiente nocturno muy sutil */
+    linear-gradient(
+      180deg,
+      rgba(8, 15, 30, 0.3) 0%,
+      rgba(15, 30, 60, 0.1) 25%,
+      rgba(25, 45, 80, 0.05) 45%,
+      transparent 65%
+    ),
+    /* Oscurecimiento base muy ligero */
+    linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.25) 0%,
+      rgba(0, 0, 0, 0.1) 50%,
+      rgba(0, 0, 0, 0.2) 100%
+    );
+  z-index: 1;
+}
+
+/* Overlay de profundidad atmosférica - muy sutil para no tapar imagen */
+.negocio-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 50%;
+  background: 
+    /* Capas atmosféricas muy transparentes */
+    radial-gradient(ellipse 800px 300px at 30% 0%, rgba(11, 20, 38, 0.08) 0%, transparent 70%),
+    radial-gradient(ellipse 600px 200px at 70% 20%, rgba(30, 58, 95, 0.06) 0%, transparent 80%),
+    radial-gradient(ellipse 400px 150px at 50% 10%, rgba(139, 90, 60, 0.04) 0%, transparent 90%);
+  animation: atmosphereShift 20s ease-in-out infinite;
+  z-index: 2;
+}
+
+.negocio-hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 45%;
+  background-image: 
+    /* Estrellas más sutiles para no tapar la imagen */
+    radial-gradient(circle 4px at 25px 25px, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.6) 30%, rgba(200, 220, 255, 0.2) 70%, transparent),
+    radial-gradient(circle 3px at 180px 20px, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.5) 40%, rgba(180, 200, 255, 0.15) 80%, transparent),
+    radial-gradient(circle 5px at 80px 40px, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 25%, rgba(220, 230, 255, 0.3) 60%, transparent),
+    radial-gradient(circle 2px at 120px 15px, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(200, 220, 255, 0.1) 100%),
+    radial-gradient(circle 3px at 200px 35px, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.6) 30%, rgba(180, 200, 255, 0.2) 70%, transparent),
+    radial-gradient(circle 1px at 60px 30px, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.4) 60%, transparent),
+    radial-gradient(circle 1px at 40px 10px, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2) 80%, transparent),
+    radial-gradient(circle 1px at 160px 45px, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.15) 70%, transparent);
+  background-repeat: repeat;
+  background-size: 240px 100px;
+  animation: starsShimmer 12s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.negocio-hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 900px;
+  padding: 2rem;
+  backdrop-filter: blur(2px);
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.negocio-hero-content h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(
+    135deg,
+    #FFFFFF 0%,
+    #F4E4BC 30%,
+    #D4A574 70%,
+    #FFFFFF 100%
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: desertTextGlow 8s ease-in-out infinite;
+  text-shadow: 
+    0 2px 10px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(244, 228, 188, 0.3);
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+.negocio-hero-content p {
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-weight: 500;
+  margin: 0 auto 3rem;
+  max-width: 700px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+/* Botones de acción épicos */
+.negocio-hero-actions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeInUp 1s ease-out 1s both;
+}
+
+.hero-btn {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero-btn-icon {
+  font-size: 1.2rem;
+  display: inline-block;
+}
+
+.hero-btn-primary {
+  background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+  color: white;
+  box-shadow: 
+    0 10px 30px rgba(255, 107, 53, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.hero-btn-primary:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 
+    0 20px 40px rgba(255, 107, 53, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.hero-btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.hero-btn-secondary:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 15px 35px rgba(255, 255, 255, 0.1);
+}
+
+/* Animaciones épicas */
+@keyframes atmosphereShift {
+  0%, 100% { 
+    transform: translateX(0px) scale(1);
+    opacity: 0.8;
+  }
+  50% { 
+    transform: translateX(15px) scale(1.02);
+    opacity: 1;
+  }
+}
+
+@keyframes starsShimmer {
+  0%, 100% { 
+    opacity: 0.9;
+    transform: translateY(0px) scale(1);
+    filter: brightness(1);
+  }
+  25% { 
+    opacity: 1;
+    transform: translateY(-1px) scale(1.1);
+    filter: brightness(1.3);
+  }
+  50% { 
+    opacity: 0.95;
+    transform: translateY(0px) scale(1.05);
+    filter: brightness(1.1);
+  }
+  75% { 
+    opacity: 0.85;
+    transform: translateY(0.5px) scale(0.98);
+    filter: brightness(0.9);
+  }
+}
+
+@keyframes sandFlow {
+  0% { 
+    transform: translateX(0px) translateY(0px) rotate(0deg);
+    opacity: 0.6;
+  }
+  100% { 
+    transform: translateX(-250px) translateY(-100px) rotate(2deg);
+    opacity: 0.3;
+  }
+}
+
+@keyframes heatWaves {
+  0%, 100% { 
+    transform: scaleX(1) scaleY(1);
+    opacity: 0.3;
+  }
+  33% { 
+    transform: scaleX(1.1) scaleY(0.9);
+    opacity: 0.5;
+  }
+  66% { 
+    transform: scaleX(0.9) scaleY(1.1);
+    opacity: 0.4;
+  }
+}
+
+@keyframes desertTextGlow {
+  0%, 100% { 
+    background-position: 0% 50%;
+    filter: 
+      brightness(1) 
+      drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3))
+      drop-shadow(0 0 15px rgba(244, 228, 188, 0.4));
+  }
+  50% { 
+    background-position: 100% 50%;
+    filter: 
+      brightness(1.1) 
+      drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.4))
+      drop-shadow(0 0 25px rgba(244, 228, 188, 0.6));
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive épico */
+@media (max-width: 768px) {
+  .negocio-hero {
+    min-height: 80vh;
+  }
+  
+  .negocio-hero-content {
+    padding: 0 1rem;
+  }
+  
+  .negocio-hero-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .hero-btn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .negocio-hero {
+    min-height: 70vh;
+  }
+  
+  .negocio-hero-content {
+    padding: 0 1rem;
+  }
+  
+  .hero-btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Sección principal con efectos elegantes */
+.Negocio {
+  position: relative;
+  background: #FAFAFA;
+}
+
+.Negocio main {
+  position: relative;
+}
+
+/* Efecto de transición entre secciones */
+.Negocio main > section:not(.negocio-hero) {
+  position: relative;
+  background: white;
+  margin-top: 0;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.Negocio main > section:not(.negocio-hero):first-of-type {
+  border-radius: 30px 30px 0 0;
+  margin-top: -30px;
+  z-index: 5;
+}
+
+/* Efectos de scroll elegantes */
+@media (prefers-reduced-motion: no-preference) {
+  .Negocio [class*="section"] {
+    animation: sectionFadeIn 0.8s ease-out;
+  }
+  
+  .Negocio [class*="card"] {
+    animation: cardSlideIn 0.6s ease-out;
+  }
+}
+
+@keyframes sectionFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Mejoras de contraste y legibilidad */
+.Negocio .section {
+  padding: 5rem 0;
+}
+
+.Negocio .section-alt {
+  background: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%);
+  position: relative;
+}
+
+.Negocio .section-alt::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(120, 119, 198, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(255, 119, 48, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Glassmorphism para elementos destacados */
+.Negocio .card {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.Negocio .card:hover {
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-10px);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+/* Normalizar tamaños de iconos en toda la página Negocio */
+.Negocio .w-8 {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+}
+
+.Negocio .h-8 {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+}
+
+.Negocio .w-6 {
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+}
+
+.Negocio .h-6 {
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+}
+
+.Negocio .w-4 {
+  width: 1rem !important;
+  height: 1rem !important;
+}
+
+.Negocio .h-4 {
+  width: 1rem !important;
+  height: 1rem !important;
+}
+
+/* Específicamente para iconos en headers de secciones */
+.Negocio .impacto-icono svg,
+.Negocio .valor-item svg,
+.Negocio svg[class*="w-"] {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Para iconos en tarjetas principales como ComoFunciona y ComunidadTalleres */
+.Negocio .taller-icono svg,
+.Negocio .paso-icono svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Estilos corporativos adicionales */
+.Negocio h2 {
+  color: #1E293B;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.Negocio h3 {
+  color: #334155;
+  font-weight: 600;
+  font-size: clamp(1.3rem, 3vw, 1.6rem);
+  line-height: 1.3;
+}
+
+.Negocio .seccion-subtitle {
+  color: #64748B;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Botones más profesionales */
+.Negocio .btn {
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.Negocio .btn-primary {
+  background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
+  color: white;
+  border: none;
+}
+
+.Negocio .btn-primary:hover {
+  background: linear-gradient(135deg, #1D4ED8 0%, #2563EB 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+}
+
+.Negocio .btn-outline {
+  background: transparent;
+  color: #1E40AF;
+  border: 2px solid #3B82F6;
+}
+
+.Negocio .btn-outline:hover {
+  background: #3B82F6;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.2);
+}
+
+/* Cards más elegantes */
+.Negocio .card,
+.Negocio [class*="card"] {
+  border-radius: 12px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.Negocio .card:hover,
+.Negocio [class*="card"]:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-color: #CBD5E1;
+}
+
+/* Mejoras tipográficas */
+.Negocio h1, 
+.Negocio h2, 
+.Negocio h3 {
+  letter-spacing: -0.02em;
+}
+
+.Negocio h2 {
+  color: #1E293B;
+  font-weight: 800;
+}
+
+.Negocio .seccion-subtitle {
+  color: #64748B;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+/* Botones mejorados en toda la página */
+.Negocio .btn {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.Negocio .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Partículas flotantes de fondo para toda la página */
+.Negocio::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(1px 1px at 25px 25px, rgba(120, 119, 198, 0.1), transparent),
+    radial-gradient(1px 1px at 50px 50px, rgba(255, 119, 48, 0.1), transparent),
+    radial-gradient(1px 1px at 75px 25px, rgba(120, 119, 198, 0.08), transparent),
+    radial-gradient(1px 1px at 100px 75px, rgba(255, 119, 48, 0.08), transparent);
+  background-repeat: repeat;
+  background-size: 100px 100px;
+  animation: gentleFloat 25s linear infinite;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+@keyframes gentleFloat {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-100px, -100px); }
+}
+
+/* Efectos de carga inicial */
+.Negocio {
+  animation: pageLoad 1s ease-out;
+}
+
+@keyframes pageLoad {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Hover mejorado para elementos interactivos */
+.Negocio [role="button"], 
+.Negocio button, 
+.Negocio .btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.Negocio [role="button"]::before,
+.Negocio button::before,
+.Negocio .btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.Negocio [role="button"]:hover::before,
+.Negocio button:hover::before,
+.Negocio .btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Arena flotante eliminada para mostrar completamente la foto */
+.negocio-hero .desert-wind {
+  display: none;
+}
+
+/* Efectos de calor del desierto - en el horizonte para mostrar el suelo */
+/* .negocio-hero .desert-atmosphere {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  right: 0;
+  height: 20%;
+  background: 
+    radial-gradient(ellipse 500px 30px at 20% 50%, rgba(255, 255, 255, 0.05) 0%, rgba(212, 165, 116, 0.1) 40%, transparent 80%),
+    radial-gradient(ellipse 700px 50px at 80% 50%, rgba(244, 228, 188, 0.08) 0%, rgba(193, 154, 107, 0.1) 50%, transparent 70%),
+    radial-gradient(ellipse 400px 25px at 50% 50%, rgba(255, 255, 255, 0.03) 0%, rgba(184, 149, 106, 0.08) 60%, transparent 90%);
+  animation: heatWaves 15s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 4;
+} */
+
+@keyframes sandFlow {
+  0% { 
+    transform: translateX(0px) translateY(0px) rotate(0deg);
+    opacity: 0.6;
+  }
+  100% { 
+    transform: translateX(-250px) translateY(-100px) rotate(2deg);
+    opacity: 0.3;
+  }
+}
+
+@keyframes heatWaves {
+  0%, 100% { 
+    transform: scaleX(1) scaleY(1);
+    opacity: 0.3;
+  }
+  33% { 
+    transform: scaleX(1.1) scaleY(0.9);
+    opacity: 0.5;
+  }
+  66% { 
+    transform: scaleX(0.9) scaleY(1.1);
+    opacity: 0.4;
+  }
+}
