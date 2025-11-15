@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
           rgba(51, 65, 85, 0.6) 50%,
           rgba(30, 41, 59, 0.7) 75%,
           rgba(15, 23, 42, 0.85) 100%),
-        url(/desierto.png)`,
+        url(${process.env.PUBLIC_URL}/desierto.png)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
             <div className="logo-spectacular">
               <div className="logo-glow"></div>
               <img 
-                src="/atacamarewearlogo.png" 
+                src={`${process.env.PUBLIC_URL}/atacamarewearlogo.png`} 
                 alt="Atacama Rewear Logo"
                 className="logo-image"
               />

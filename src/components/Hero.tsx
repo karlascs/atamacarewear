@@ -25,7 +25,7 @@ interface HeroSlide {
 const heroSlides: HeroSlide[] = [
   {
     id: 1,
-    backgroundImage: '/desiertoatacama.jpg',
+    backgroundImage: `${process.env.PUBLIC_URL}/desiertoatacama.jpg`,
     texts: {
       main: 'El Desierto de Atacama es uno de los lugares más áridos del mundo, capaz de cubrirse de flores y vida en medio de la sequía. Hoy también recibe toneladas de ropa desechada. Desde este contraste nace nuestra misión: convertir esos residuos textiles en moda consciente que ayude al desierto a florecer de nuevo.'
     },
@@ -33,7 +33,7 @@ const heroSlides: HeroSlide[] = [
   },
   {
     id: 2,
-    backgroundImage: '/basuralderopaatacama.jpg',
+    backgroundImage: `${process.env.PUBLIC_URL}/basuralderopaatacama.jpg`,
     texts: {
       subtitle: 'Empresa de moda circular que rescata ropa descartada en el Desierto de Atacama y la transforma en nuevas prendas y accesorios de diseño, generando empleo inclusivo y educación en consumo responsable.'
     },
@@ -41,7 +41,7 @@ const heroSlides: HeroSlide[] = [
   },
   {
     id: 3,
-    backgroundImage: '/atacamabasural.jpg',
+    backgroundImage: `${process.env.PUBLIC_URL}/atacamabasural.jpg`,
     texts: {
       purpose: 'Propósito: Transformar el problema de los residuos textiles en oportunidad de desarrollo social y ambiental, demostrando que la moda puede regenerar ecosistemas y comunidades en lugar de destruirlos.',
       mission: 'Misión: Rescatar textiles desechados en el norte de Chile, rediseñarlos bajo principios de economía circular e inclusión social, generando productos de moda consciente y programas educativos que impulsen el consumo responsable y la empleabilidad de grupos vulnerables.',
@@ -51,7 +51,7 @@ const heroSlides: HeroSlide[] = [
   },
   {
     id: 4,
-    backgroundImage: '/desiertoflorido.jpg',
+    backgroundImage: `${process.env.PUBLIC_URL}/desiertoflorido.jpg`,
     texts: {
       final: 'Haz florecer el desierto con cada prenda que eliges.'
     },
@@ -171,7 +171,7 @@ const Hero = forwardRef<HeroRef>((props, ref) => {
               <div className="slide-content slide-2">
                 <div className="hero-logo-slideshow">
                   <img 
-                    src="/atacamarewearlogo.png" 
+                    src={`${process.env.PUBLIC_URL}/atacamarewearlogo.png`} 
                     alt="Atacama Rewear Logo" 
                   />
                 </div>

@@ -20,7 +20,7 @@ const Negocio: React.FC = () => {
           <div 
             className="negocio-hero-background"
             style={{ 
-              backgroundImage: 'url(/desiertoatacama.jpg)' 
+              backgroundImage: `url(${process.env.PUBLIC_URL}/desiertoatacama.jpg)` 
             }}
           >
             <div className="negocio-hero-overlay"></div>

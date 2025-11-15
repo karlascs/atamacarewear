@@ -62,7 +62,7 @@ const NavbarHome: React.FC<NavbarHomeProps> = ({ heroRef }) => {
             onClick={handleLogoClick}
           >
             <img 
-              src="/atacamarewearlogo.png" 
+              src={`${process.env.PUBLIC_URL}/atacamarewearlogo.png`} 
               alt="Atacama Rewear Logo" 
               className="brand-logo"
             />
@@ -159,7 +159,7 @@ const NavbarHome: React.FC<NavbarHomeProps> = ({ heroRef }) => {
             <div className="modal-header">
               <div className="header-content">
                 <img 
-                  src="/cftestatal.png" 
+                  src={`${process.env.PUBLIC_URL}/cftestatal.png`} 
                   alt="CFT Estatal" 
                   className="cft-logo-header"
                 />

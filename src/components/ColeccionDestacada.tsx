@@ -18,7 +18,7 @@ const productos: Producto[] = [
     nombre: "Chaqueta Desierto",
     descripcion: "Chaqueta única elaborada con denim rescatado del Atacama. Perfecta combinación de estilo urbano y conciencia ambiental.",
     precio: 45000,
-    imagenUrl: "/chaquetamesclilla.png",
+    imagenUrl: `${process.env.PUBLIC_URL}/chaquetamesclilla.png`,
     etiquetas: ["Denim", "Unisex", "Pieza Única"],
     esUnico: true
   },
@@ -27,7 +27,7 @@ const productos: Producto[] = [
     nombre: "Bolso Arena",
     descripcion: "Bolso artesanal hecho con textiles de algodón recuperados. Diseño funcional inspirado en las dunas del Atacama.",
     precio: 25000,
-    imagenUrl: "/bolsoarena.png",
+    imagenUrl: `${process.env.PUBLIC_URL}/bolsoarena.png`,
     etiquetas: ["Algodón", "Artesanal", "Sostenible"],
     esUnico: true
   },
@@ -36,7 +36,7 @@ const productos: Producto[] = [
     nombre: "Polera Atacama",
     descripcion: "Camiseta renovada con bordado inspirado en el desierto. Comodidad y estilo en cada hilo rescatado.",
     precio: 18000,
-    imagenUrl: "/poleraatacama.png",
+    imagenUrl: `${process.env.PUBLIC_URL}/poleraatacama.png`,
     etiquetas: ["Algodón", "Bordado", "Casual"],
     esUnico: false
   },
@@ -45,7 +45,7 @@ const productos: Producto[] = [
     nombre: "Falda Circular",
     descripcion: "Falda midi creada con retazos de telas diversas. Cada pieza cuenta una historia única de transformación.",
     precio: 32000,
-    imagenUrl: "/faldacircular.png",
+    imagenUrl: `${process.env.PUBLIC_URL}/faldacircular.png`,
     etiquetas: ["Mezclilla", "Pieza Única", "Elegante"],
     esUnico: true
   },
@@ -54,7 +54,7 @@ const productos: Producto[] = [
     nombre: "Bandana Rescatada",
     descripcion: "Accesorio versátil hecho con seda rescatada. Perfecta para múltiples usos y estilos, refleja la versatilidad del desierto.",
     precio: 12000,
-    imagenUrl: "/bandanarescatada.png",
+    imagenUrl: `${process.env.PUBLIC_URL}/bandanarescatada.png`,
     etiquetas: ["Seda", "Accesorio", "Versátil"],
     esUnico: false
   },
@@ -63,7 +63,7 @@ const productos: Producto[] = [
     nombre: "Kimono Rewear",
     descripcion: "Kimono ligero con estampados originales del desierto. Elegancia fluida inspirada en los atardeceres del Atacama.",
     precio: 38000,
-    imagenUrl: "/kimonorewear.png",
+    imagenUrl: `${process.env.PUBLIC_URL}/kimonorewear.png`,
     etiquetas: ["Poliéster", "Pieza Única", "Elegante"],
     esUnico: true
   }

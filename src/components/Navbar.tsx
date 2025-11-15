@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
           <div className="navbar-brand">
             <button onClick={scrollToTop} className="brand-link">
               <img 
-                src="/atacamarewearlogo.png" 
+                src={`${process.env.PUBLIC_URL}/atacamarewearlogo.png`} 
                 alt="Atacama Rewear Logo"
                 className="navbar-logo"
               />
