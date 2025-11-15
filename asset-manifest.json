@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/atamacarewear/static/css/main.39fca01c.css",
+    "main.js": "/atamacarewear/static/js/main.732de9b6.js",
+    "static/js/453.b9345707.chunk.js": "/atamacarewear/static/js/453.b9345707.chunk.js",
+    "index.html": "/atamacarewear/index.html",
+    "main.39fca01c.css.map": "/atamacarewear/static/css/main.39fca01c.css.map",
+    "main.732de9b6.js.map": "/atamacarewear/static/js/main.732de9b6.js.map",
+    "453.b9345707.chunk.js.map": "/atamacarewear/static/js/453.b9345707.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.39fca01c.css",
+    "static/js/main.732de9b6.js"
+  ]
+}
