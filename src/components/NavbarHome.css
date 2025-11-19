@@ -496,18 +496,18 @@
 
 /* Logo del Proyecto */
 .project-logo-section {
-  margin: 1.5rem 0;
-  padding: 1.5rem;
+  margin: 1rem 0;
+  padding: 1rem;
   background: linear-gradient(135deg, 
     rgba(45, 90, 39, 0.08) 0%, 
     rgba(245, 158, 11, 0.08) 100%);
-  border-radius: 20px;
+  border-radius: 16px;
   border: 2px solid rgba(245, 158, 11, 0.2);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 .project-logo {
-  width: 130px;
+  width: 90px;
   height: auto;
   filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
   transition: transform 0.4s ease;
@@ -714,7 +714,7 @@
   }
 
   .project-logo {
-    width: 110px;
+    width: 80px;
   }
 
   .team-members {
@@ -769,11 +769,11 @@
   }
 
   .project-logo-section {
-    padding: 1.5rem;
+    padding: 1rem;
   }
 
   .project-logo {
-    width: 100px;
+    width: 70px;
   }
 
   .info-row {
@@ -865,12 +865,12 @@
   }
 
   .project-logo-section {
-    margin: 1.5rem 0;
-    padding: 1.25rem;
+    margin: 1rem 0;
+    padding: 0.875rem;
   }
 
   .project-logo {
-    width: 85px;
+    width: 60px;
   }
 
   .work-info {
