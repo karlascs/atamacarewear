@@ -70,13 +70,13 @@ const DireccionEstrategica: React.FC = () => {
     return () => observer.disconnect();
   }, []);
 
-  // Auto-rotación de secciones estratégicas cada 20 segundos
+  // Auto-rotación de secciones estratégicas cada 25 segundos
   useEffect(() => {
     const interval = setInterval(() => {
       setSelectedSeccion((prev) => 
         prev === seccionesEstrategicas.length - 1 ? 0 : prev + 1
       );
-    }, 20000);
+    }, 25000);
 
     return () => clearInterval(interval);
   }, []);
