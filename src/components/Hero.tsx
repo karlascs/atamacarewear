@@ -29,7 +29,7 @@ const heroSlides: HeroSlide[] = [
     texts: {
       main: 'El Desierto de Atacama es uno de los lugares más áridos del mundo, capaz de cubrirse de flores y vida en medio de la sequía. Hoy también recibe toneladas de ropa desechada. Desde este contraste nace nuestra misión: convertir esos residuos textiles en moda consciente que ayude al desierto a florecer de nuevo.'
     },
-    duration: 8000
+    duration: 15000
   },
   {
     id: 2,
@@ -37,7 +37,7 @@ const heroSlides: HeroSlide[] = [
     texts: {
       subtitle: 'Empresa de moda circular que rescata ropa descartada en el Desierto de Atacama y la transforma en nuevas prendas y accesorios de diseño, generando empleo inclusivo y educación en consumo responsable.'
     },
-    duration: 5000
+    duration: 12000
   },
   {
     id: 3,
@@ -47,7 +47,7 @@ const heroSlides: HeroSlide[] = [
       mission: 'Misión: Rescatar textiles desechados en el norte de Chile, rediseñarlos bajo principios de economía circular e inclusión social, generando productos de moda consciente y programas educativos que impulsen el consumo responsable y la empleabilidad de grupos vulnerables.',
       vision: 'Visión: Ser la empresa de referencia en remediación textil en Latinoamérica, reduciendo significativamente los residuos de ropa en el Desierto de Atacama y consolidando una red de talleres inclusivos que inspiren a otras industrias a adoptar modelos de triple impacto.'
     },
-    duration: 10000
+    duration: 20000
   },
   {
     id: 4,
@@ -55,7 +55,7 @@ const heroSlides: HeroSlide[] = [
     texts: {
       final: 'Haz florecer el desierto con cada prenda que eliges.'
     },
-    duration: 4000
+    duration: 8000
   }
 ];
 
@@ -93,7 +93,7 @@ const Hero = forwardRef<HeroRef>((props, ref) => {
         setIsTyping(false);
         if (callback) callback();
       }
-    }, 40);
+    }, 25);
     
     return () => clearInterval(timer);
   };
@@ -126,9 +126,9 @@ const Hero = forwardRef<HeroRef>((props, ref) => {
               timeoutId = setTimeout(() => {
                 setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
                 setTextIndex(0);
-              }, 2000);
+              }, 4000);
             }
-          }, 1500);
+          }, 3000);
         });
       }, 100);
     }
