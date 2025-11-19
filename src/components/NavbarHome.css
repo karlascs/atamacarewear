@@ -311,21 +311,21 @@
   box-shadow: 0 2px 8px rgba(247, 147, 30, 0.3);
 }
 
-/* Presentation Modal */
+/* Presentation Modal - Estilo Portada Académica */
 .presentation-modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(10px);
   z-index: 2000;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  animation: fadeIn 0.3s ease;
+  animation: fadeIn 0.4s ease;
 }
 
 @keyframes fadeIn {
@@ -334,138 +334,312 @@
 }
 
 .presentation-modal {
-  background: linear-gradient(135deg, 
-    rgba(15, 23, 42, 0.95) 0%, 
-    rgba(30, 41, 59, 0.9) 100%);
-  border: 1px solid rgba(245, 158, 11, 0.3);
-  border-radius: 16px;
-  padding: 2rem;
-  max-width: 600px;
+  position: relative;
+  background: linear-gradient(145deg, #FFFFFF 0%, #F8FAFC 100%);
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  max-width: 700px;
   width: 100%;
-  max-height: 80vh;
+  max-height: 90vh;
   overflow-y: auto;
-  backdrop-filter: blur(20px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  animation: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 25px 80px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(245, 158, 11, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  animation: slideUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 @keyframes slideUp {
   from { 
-    transform: translateY(30px); 
+    transform: translateY(50px) scale(0.95); 
     opacity: 0; 
   }
   to { 
-    transform: translateY(0); 
+    transform: translateY(0) scale(1); 
     opacity: 1; 
   }
 }
 
-.modal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid rgba(245, 158, 11, 0.3);
-}
-
-.header-content {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.cft-logo-header {
-  width: 80px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  filter: drop-shadow(0 2px 6px rgba(245, 158, 11, 0.3));
-  border: 2px solid rgba(245, 158, 11, 0.3);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.cft-logo-header:hover {
-  transform: scale(1.05);
-  filter: drop-shadow(0 3px 8px rgba(245, 158, 11, 0.4));
-}
-
-.modal-header h2 {
-  color: #F59E0B;
-  font-size: 1.6rem;
-  font-weight: 700;
-  text-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);
-  letter-spacing: 0.5px;
-  margin: 0;
-}
-
 .modal-close-btn {
-  background: none;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: rgba(71, 85, 105, 0.1);
   border: none;
-  color: #94A3B8;
-  width: 24px;
-  height: 24px;
+  color: #64748B;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
 }
 
 .modal-close-btn:hover {
-  color: #F59E0B;
+  background: rgba(239, 68, 68, 0.15);
+  color: #EF4444;
+  transform: rotate(90deg);
 }
 
-.modal-content {
+.modal-close-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Portada Académica */
+.cover-page {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
 }
 
-.modal-info {
+/* Header Institucional */
+.institution-header {
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  align-items: center;
+  gap: 1.25rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 3px solid #F59E0B;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
-.info-section h3 {
-  color: #F59E0B;
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid rgba(245, 158, 11, 0.2);
+.institution-logo {
+  width: 90px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  border: 3px solid #F59E0B;
+  transition: transform 0.3s ease;
 }
 
-.integrantes {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+.institution-logo:hover {
+  transform: scale(1.05);
 }
 
-.integrante {
-  background: rgba(51, 65, 85, 0.3);
-  padding: 0.75rem 1rem;
-  border-radius: 8px;
-  border-left: 3px solid #F59E0B;
+.institution-info {
+  text-align: left;
+  flex: 1;
 }
 
-.name {
-  color: #E2E8F0;
+.institution-name {
+  color: #1E293B;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem 0;
+  line-height: 1.3;
+}
+
+.institution-region {
+  color: #64748B;
+  font-size: 0.95rem;
   font-weight: 500;
+  margin: 0;
 }
 
-.academic-details {
+/* Decoración */
+.cover-decoration {
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #F59E0B 0%, #FF6B35 100%);
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);
+}
+
+/* Título del Proyecto */
+.project-title-section {
+  margin: 1.5rem 0;
+  width: 100%;
+}
+
+.title-decoration-top {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #F59E0B, transparent);
+  margin: 0 auto 1.5rem;
+  border-radius: 2px;
+}
+
+.project-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin: 0;
+  background: linear-gradient(135deg, #1E293B 0%, #2D5A27 50%, #F59E0B 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  text-shadow: 0 4px 20px rgba(245, 158, 11, 0.2);
+}
+
+.title-decoration-bottom {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #2D5A27, transparent);
+  margin: 1rem auto 1.5rem;
+  border-radius: 2px;
+}
+
+.project-subtitle {
+  font-size: 1.25rem;
+  color: #475569;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Logo del Proyecto */
+.project-logo-section {
+  margin: 2rem 0;
+  padding: 2rem;
+  background: linear-gradient(135deg, 
+    rgba(45, 90, 39, 0.08) 0%, 
+    rgba(245, 158, 11, 0.08) 100%);
+  border-radius: 20px;
+  border: 2px solid rgba(245, 158, 11, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.project-logo {
+  width: 180px;
+  height: auto;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+  transition: transform 0.4s ease;
+}
+
+.project-logo:hover {
+  transform: scale(1.08);
+}
+
+/* Información del Trabajo */
+.work-info {
+  width: 100%;
+  background: rgba(248, 250, 252, 0.8);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 2px solid rgba(203, 213, 225, 0.5);
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
-.academic-details p {
-  color: #CBD5E1;
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: white;
+  border-radius: 8px;
+  border-left: 4px solid #F59E0B;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.info-label {
+  color: #64748B;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.info-value {
+  color: #1E293B;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* Sección de Integrantes */
+.team-section {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.team-title {
+  color: #1E293B;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.team-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #2D5A27, #F59E0B);
+  border-radius: 2px;
+}
+
+.team-members {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.team-member {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, 
+    rgba(45, 90, 39, 0.05) 0%, 
+    rgba(255, 255, 255, 1) 100%);
+  border-radius: 12px;
+  border: 2px solid rgba(245, 158, 11, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.2);
+  border-color: rgba(245, 158, 11, 0.5);
+}
+
+.member-icon {
+  font-size: 1.8rem;
+  background: linear-gradient(135deg, #2D5A27, #F59E0B);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.member-name {
+  color: #1E293B;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+/* Footer de la Portada */
+.cover-footer {
+  width: 100%;
+  padding-top: 1.5rem;
+  border-top: 2px solid rgba(203, 213, 225, 0.5);
+  margin-top: 1rem;
+}
+
+.date {
+  color: #64748B;
+  font-size: 1rem;
+  font-weight: 600;
   margin: 0;
-  padding: 0.5rem 0;
-}
-
-.academic-details strong {
-  color: #F8FAFC;
+  letter-spacing: 0.5px;
 }
 
 
@@ -511,6 +685,41 @@
   .modal-info {
     text-align: center;
   }
+
+  /* Responsive Portada */
+  .presentation-modal {
+    padding: 2.5rem 2rem;
+  }
+
+  .institution-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .institution-info {
+    text-align: center;
+  }
+
+  .institution-name {
+    font-size: 1.1rem;
+  }
+
+  .project-title {
+    font-size: 2.3rem;
+  }
+
+  .project-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .project-logo {
+    width: 150px;
+  }
+
+  .team-members {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 640px) {
@@ -523,12 +732,58 @@
   }
 
   .presentation-modal {
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
     margin: 1rem;
   }
 
   .modal-content {
     gap: 1rem;
+  }
+
+  .presentation-modal {
+    padding: 2rem 1.25rem;
+  }
+
+  .institution-logo {
+    width: 70px;
+  }
+
+  .institution-name {
+    font-size: 1rem;
+  }
+
+  .institution-region {
+    font-size: 0.85rem;
+  }
+
+  .cover-decoration {
+    width: 80px;
+  }
+
+  .project-title {
+    font-size: 2rem;
+  }
+
+  .project-subtitle {
+    font-size: 1rem;
+  }
+
+  .project-logo-section {
+    padding: 1.5rem;
+  }
+
+  .project-logo {
+    width: 130px;
+  }
+
+  .info-row {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .team-title {
+    font-size: 1rem;
   }
 }
 
@@ -567,5 +822,92 @@
 
   .cft-logo-header {
     width: 60px;
+  }
+
+  .presentation-modal {
+    padding: 1.5rem 1rem;
+  }
+
+  .modal-close-btn {
+    top: 1rem;
+    right: 1rem;
+    width: 32px;
+    height: 32px;
+  }
+
+  .modal-close-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .institution-header {
+    padding-bottom: 1rem;
+  }
+
+  .institution-logo {
+    width: 60px;
+  }
+
+  .institution-name {
+    font-size: 0.9rem;
+  }
+
+  .institution-region {
+    font-size: 0.8rem;
+  }
+
+  .project-title {
+    font-size: 1.75rem;
+  }
+
+  .project-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .project-logo-section {
+    margin: 1.5rem 0;
+    padding: 1.25rem;
+  }
+
+  .project-logo {
+    width: 110px;
+  }
+
+  .work-info {
+    padding: 1.25rem;
+  }
+
+  .info-row {
+    padding: 0.625rem 0.875rem;
+  }
+
+  .info-label {
+    font-size: 0.875rem;
+  }
+
+  .info-value {
+    font-size: 0.9rem;
+  }
+
+  .team-title {
+    font-size: 0.95rem;
+  }
+
+  .team-member {
+    padding: 0.875rem 1rem;
+  }
+
+  .member-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 1.5rem;
+  }
+
+  .member-name {
+    font-size: 0.9rem;
+  }
+
+  .date {
+    font-size: 0.9rem;
   }
 }

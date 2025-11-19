@@ -156,45 +156,79 @@ const NavbarHome: React.FC<NavbarHomeProps> = ({ heroRef }) => {
       {isPresentationOpen && (
         <div className="presentation-modal-overlay" onClick={togglePresentation}>
           <div className="presentation-modal" onClick={(e) => e.stopPropagation()}>
-            <div className="modal-header">
-              <div className="header-content">
+            <button 
+              className="modal-close-btn"
+              onClick={togglePresentation}
+              aria-label="Cerrar"
+            >
+              <XMarkIcon />
+            </button>
+
+            {/* Portada estilo académico */}
+            <div className="cover-page">
+              {/* Logo institucional */}
+              <div className="institution-header">
                 <img 
                   src={`${process.env.PUBLIC_URL}/cftestatal.png`} 
                   alt="CFT Estatal" 
-                  className="cft-logo-header"
+                  className="institution-logo"
                 />
-                <h2>Información del Proyecto</h2>
+                <div className="institution-info">
+                  <h3 className="institution-name">Centro de Formación Técnica Estatal</h3>
+                  <p className="institution-region">Región de Atacama</p>
+                </div>
               </div>
-              <button 
-                className="modal-close-btn"
-                onClick={togglePresentation}
-              >
-                <XMarkIcon />
-              </button>
-            </div>
-            
-            <div className="modal-content">
 
-              <div className="modal-info">
-                <div className="info-section">
-                  <h3>Integrantes</h3>
-                  <div className="integrantes">
-                    <div className="integrante">
-                      <span className="name">Alonso Baez</span>
-                    </div>
-                    <div className="integrante">
-                      <span className="name">Karla Cuevas</span>
-                    </div>
+              {/* Decoración superior */}
+              <div className="cover-decoration"></div>
+
+              {/* Título del proyecto */}
+              <div className="project-title-section">
+                <div className="title-decoration-top"></div>
+                <h1 className="project-title">Atacama Rewear</h1>
+                <div className="title-decoration-bottom"></div>
+                <p className="project-subtitle">Transformando Residuos Textiles en Moda Circular</p>
+              </div>
+
+              {/* Logo del proyecto */}
+              <div className="project-logo-section">
+                <img 
+                  src={`${process.env.PUBLIC_URL}/atacamarewearlogo.png`} 
+                  alt="Atacama Rewear Logo" 
+                  className="project-logo"
+                />
+              </div>
+
+              {/* Información del trabajo */}
+              <div className="work-info">
+                <div className="info-row">
+                  <span className="info-label">Asignatura:</span>
+                  <span className="info-value">Taller de Emprendimiento</span>
+                </div>
+                <div className="info-row">
+                  <span className="info-label">Profesor:</span>
+                  <span className="info-value">Nicolás Manzur</span>
+                </div>
+              </div>
+
+              {/* Integrantes */}
+              <div className="team-section">
+                <h4 className="team-title">Integrantes del Proyecto</h4>
+                <div className="team-members">
+                  <div className="team-member">
+                    <div className="member-icon">👤</div>
+                    <span className="member-name">Alonso Baez</span>
+                  </div>
+                  <div className="team-member">
+                    <div className="member-icon">👤</div>
+                    <span className="member-name">Karla Cuevas</span>
                   </div>
                 </div>
+              </div>
 
-                <div className="info-section">
-                  <h3>Detalles Académicos</h3>
-                  <div className="academic-details">
-                    <p><strong>Asignatura:</strong> Taller de Emprendimiento</p>
-                    <p><strong>Profesor:</strong> Nicolás Manzur</p>
-                  </div>
-                </div>
+              {/* Fecha */}
+              <div className="cover-footer">
+                <p className="date">Noviembre 2025</p>
               </div>
             </div>
           </div>
