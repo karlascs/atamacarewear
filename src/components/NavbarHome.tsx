@@ -175,7 +175,7 @@ const NavbarHome: React.FC<NavbarHomeProps> = ({ heroRef }) => {
                 />
                 <div className="institution-info">
                   <h3 className="institution-name">Centro de Formación Técnica Estatal</h3>
-                  <p className="institution-region">Región de Atacama</p>
+                  <p className="institution-region">Región de Valparaíso</p>
                 </div>
               </div>
 
