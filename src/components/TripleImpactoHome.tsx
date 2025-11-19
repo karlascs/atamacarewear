@@ -94,7 +94,7 @@ const TripleImpactoHome: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveImpact((prev) => (prev + 1) % impactData.length);
-    }, 8000);
+    }, 20000);
 
     return () => clearInterval(interval);
   }, []);
