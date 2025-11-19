@@ -43,7 +43,7 @@ const impactos: Impacto[] = [
   {
     categoria: "Social",
     titulo: "Generamos oportunidades, construimos comunidad",
-    descripcion: "Nuestros talleres inclusivos crean empleos dignos para mujeres jefas de hogar, migrantes y jóvenes en situación vulnerable.",
+    descripcion: "Nuestros talleres inclusivos crean empleos dignos para mujeres jefas de hogar y jóvenes en situación vulnerable.",
     icono: <HeartIcon className="w-8 h-8" />,
     color: "var(--color-naranjo)",
     estadisticas: [

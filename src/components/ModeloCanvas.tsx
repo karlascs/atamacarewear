@@ -81,7 +81,7 @@ const canvasData: CanvasSection[] = [
     items: [
       'Prendas y accesorios únicos hechos a partir de textiles rescatados del Desierto de Atacama',
       'Moda circular que reduce residuos textiles y emisiones asociadas',
-      'Generación de empleo inclusivo para mujeres jefas de hogar, migrantes y jóvenes vulnerables',
+      'Generación de empleo inclusivo para mujeres jefas de hogar y jóvenes vulnerables',
       'Productos corporativos sustentables que fortalecen la imagen ESG de las empresas',
       'Programas educativos en consumo responsable y economía circular',
       'Trazabilidad y transparencia: del residuo al producto final'
