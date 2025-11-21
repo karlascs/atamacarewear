@@ -1,6 +1,6 @@
 /* Competencias Home Styles */
 .competencias-home {
-  padding: 120px 0;
+  padding: 60px 0;
   background: linear-gradient(
     180deg,
     rgba(15, 23, 42, 0.95) 0%,
@@ -27,7 +27,7 @@
 /* Header */
 .competencias-header {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   opacity: 0;
   transform: translateY(30px);
   transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
@@ -39,10 +39,10 @@
 }
 
 .section-title {
-  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-size: clamp(2rem, 4vw, 2.5rem);
   font-weight: 700;
   color: white;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   line-height: 1.1;
   word-spacing: 0.1em;

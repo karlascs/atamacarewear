@@ -1,6 +1,6 @@
 /* Modelo Canvas Styles */
 .modelo-canvas {
-  padding: 120px 0;
+  padding: 60px 0;
   background: linear-gradient(
     135deg,
     rgba(249, 250, 251, 1) 0%,
@@ -36,7 +36,7 @@
 /* Header */
 .canvas-header {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   opacity: 0;
   transform: translateY(30px);
   transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
