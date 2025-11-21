@@ -91,14 +91,6 @@ const TripleImpactoHome: React.FC = () => {
     return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveImpact((prev) => (prev + 1) % impactData.length);
-    }, 35000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   const currentImpact = impactData[activeImpact];
   const IconComponent = currentImpact.icon;
 

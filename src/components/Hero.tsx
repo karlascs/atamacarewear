@@ -122,11 +122,6 @@ const Hero = forwardRef<HeroRef>((props, ref) => {
           timeoutId = setTimeout(() => {
             if (textIndex < texts.length - 1) {
               setTextIndex(textIndex + 1);
-            } else {
-              timeoutId = setTimeout(() => {
-                setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-                setTextIndex(0);
-              }, 4000);
             }
           }, 3000);
         });

@@ -70,17 +70,6 @@ const DireccionEstrategica: React.FC = () => {
     return () => observer.disconnect();
   }, []);
 
-  // Auto-rotación de secciones estratégicas cada 35 segundos
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setSelectedSeccion((prev) => 
-        prev === seccionesEstrategicas.length - 1 ? 0 : prev + 1
-      );
-    }, 35000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   const currentSeccion = seccionesEstrategicas[selectedSeccion];
   const IconComponent = currentSeccion.icono;
 

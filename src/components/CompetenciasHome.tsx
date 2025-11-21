@@ -85,17 +85,6 @@ const CompetenciasHome: React.FC = () => {
     return () => observer.disconnect();
   }, []);
 
-  // Auto-rotación de competencias cada 35 segundos
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setSelectedCompetencia((prev) => 
-        prev === competenciasData.length - 1 ? 0 : prev + 1
-      );
-    }, 35000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   const currentCompetencia = competenciasData[selectedCompetencia];
   const IconComponent = currentCompetencia.icon;
 
